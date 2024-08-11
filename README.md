@@ -153,6 +153,8 @@ X_train, X_test, y_train, y_test = train_test_split(X_scaled, y, test_size=0.3, 
 
 To handle class imbalances, we applied SMOTE (Synthetic Minority Over-sampling Technique).
 
+Initially, the model was trained without SMOTE to assess its performance under the original class distribution. Subsequently, SMOTE was used to create synthetic samples and balance the dataset. The differences in model performance between these approaches are detailed in the [Results](#results) section.
+
    ```python
 from imblearn.over_sampling import SMOTE
 
@@ -180,6 +182,16 @@ print(classification_report(y_test, y_pred))
 ## Results
 
 The RandomForestClassifier demonstrated strong performance in predicting wine quality. The classification report shows that the model is both precise and robust, making it suitable for this classification task.
+
+*Using SMOTE*
+When SMOTE was applied, the model's performance improved by addressing class imbalance. The generated synthetic samples helped the model to better learn from minority classes, resulting in a more balanced and accurate prediction.
+
+![image](https://github.com/user-attachments/assets/20424ad1-7749-4c5f-ba6f-bbea3c7ba567)
+
+*Not using SMOTE*
+Without using SMOTE, the model's performance reflected the inherent class imbalance in the dataset. The predictions were more skewed towards the majority class, which can lead to less reliable results for the minority class.
+
+![image](https://github.com/user-attachments/assets/55510f88-9dbf-47fd-bbf1-889d4c33c668)
 
 ## Usage
 
