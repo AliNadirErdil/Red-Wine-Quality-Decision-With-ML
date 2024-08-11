@@ -54,6 +54,8 @@ We checked for missing values to ensure the data's integrity.
 ```python
 print(df.isnull().sum())
 ```
+![image](https://github.com/user-attachments/assets/c65fc4b4-d533-4e82-b350-b0333f6ff658)
+
 
 ### 3. Correlation Matrix
 
@@ -68,6 +70,8 @@ plt.figure(figsize=(8, 5))
 sb.heatmap(corr, annot=True, fmt=".2f", cmap='coolwarm')
 plt.show()
 ```
+![image](https://github.com/user-attachments/assets/5b7c13a1-fe79-4cfa-9eab-02a76847aa89)
+
 ### 4. Boxplots for Outlier Detection
 
 Boxplots were created for each variable to detect potential outliers.
@@ -79,6 +83,8 @@ plt.title('Boxplot of All Variables')
 plt.xticks(rotation=45)
 plt.show()
 ```
+![image](https://github.com/user-attachments/assets/f91877da-2495-40d8-a7c7-ec28a47baf17)
+
 ### 5. Scatter Plots
 
 Scatter plots were used to visualize the relationship between wine quality and each chemical property.
@@ -94,6 +100,9 @@ for feature in features:
     plt.title(f'{feature} vs Quality')
     plt.show()
 ```
+![qualityGraphs](https://github.com/user-attachments/assets/d7b6c476-bcbc-4ba8-b4b1-6e106cb8b987)
+
+
 
 ## Data Preprocessing
 
@@ -121,6 +130,8 @@ outliers_total = df[(df['total sulfur dioxide'] < (Q1_total - 1.5 * IQR_total)) 
   ``` python
 outlier_rows = pd.concat([outliers_free, outliers_total]).drop_duplicates()
    ```
+Although the dataset contains some outliers, these values were not excessively extreme or unrealistic. Therefore, I decided to retain them in the dataset.
+
 ### 2. Feature Scaling
 To ensure all features contribute equally to the model, we scaled the data using StandardScaler.
   ``` python
