@@ -1,4 +1,4 @@
-# Red Wine Quality Decision With ML
+# 🍷 Red Wine Quality Decision With Machine Learning
 
 ## Project Overview
 
@@ -49,7 +49,7 @@ df.describe().T
 df.info()
 ```
 ### 2. Missing Values Check
-We checked for missing values to ensure the data's integrity.
+I checked for missing values to ensure the data's integrity.
 
 ```python
 print(df.isnull().sum())
@@ -59,7 +59,7 @@ print(df.isnull().sum())
 
 ### 3. Correlation Matrix
 
-We computed the correlation matrix to understand relationships between different features.
+I computed the correlation matrix to understand relationships between different features.
 
 ```python
 import seaborn as sb
@@ -108,7 +108,7 @@ for feature in features:
 
 ### 1. Handling Outliers
 
-We used the Interquartile Range (IQR) method to detect and manage outliers in the free sulfur dioxide and total sulfur dioxide features.
+I used the Interquartile Range (IQR) method to detect and manage outliers in the free sulfur dioxide and total sulfur dioxide features.
 
 
 
@@ -133,7 +133,7 @@ outlier_rows = pd.concat([outliers_free, outliers_total]).drop_duplicates()
 Although the dataset contains some outliers, these values were not excessively extreme or unrealistic. Therefore, I decided to retain them in the dataset.
 
 ### 2. Feature Scaling
-To ensure all features contribute equally to the model, we scaled the data using StandardScaler.
+To ensure all features contribute equally to the model, I scaled the data using StandardScaler.
   ``` python
 from sklearn.preprocessing import StandardScaler
 
@@ -151,7 +151,7 @@ X_train, X_test, y_train, y_test = train_test_split(X_scaled, y, test_size=0.3, 
 ### 4. Balancing the Dataset
 
 
-To handle class imbalances, we applied SMOTE (Synthetic Minority Over-sampling Technique).
+To handle class imbalances, I applied SMOTE (Synthetic Minority Over-sampling Technique).
 
 Initially, the model was trained without SMOTE to assess its performance under the original class distribution. Subsequently, SMOTE was used to create synthetic samples and balance the dataset. The differences in model performance between these approaches are detailed in the [Results](#results) section.
 
@@ -163,7 +163,7 @@ X_resampled, y_resampled = smote.fit_resample(X_train, y_train)
    ```
 ## Modeling
 
-We trained a RandomForestClassifier model on the resampled training set.
+I trained a RandomForestClassifier model on the resampled training set.
 
    ```python
 from sklearn.ensemble import RandomForestClassifier
@@ -199,16 +199,22 @@ To use this project, follow these steps:
 
 1. **Clone the Repository**
 ```bash
-git clone https://github.com/yourusername/Red-Wine-Quality-Decision-With-ML.git
+git clone https://github.com/AliNadirErdil/Red-Wine-Quality-Decision-With-ML.git
+```
+2. **Navigate to the Project Directory
+**
+```bash
+cd Red-Wine-Quality-Decision-With-ML
 ```
 2. **Install the required dependencies:**
 ```bash
 pip install -r requirements.txt
 ```
-3. **Run the model:**
+3. **Open the Jupyter Notebook
+**
 ```bash
-python main.py
+jupyter notebook
 ```
-
+Then, open main.ipynb in JupyterLab and run the cells to execute the project.
 ## Contributing
 Contributions are welcome! If you'd like to contribute, please fork this repository and submit a pull request.
