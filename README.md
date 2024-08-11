@@ -85,6 +85,8 @@ plt.show()
 ```
 ![image](https://github.com/user-attachments/assets/f91877da-2495-40d8-a7c7-ec28a47baf17)
 
+In wine, the total sulfur dioxide (SO2) level typically ranges between 10 and 200 mg/L, indicating the amount of sulfur dioxide used in the wine. However, in certain cases, such as with sweet wines that have high sugar content or wines that need to be stored for extended periods, this value can rise up to 300 mg/L. Therefore, instead of focusing on individual values, I prefer to maintain a consistent level in the wine.
+
 ### 5. Scatter Plots
 
 Scatter plots were used to visualize the relationship between wine quality and each chemical property.
