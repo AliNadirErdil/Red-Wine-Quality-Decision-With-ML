@@ -83,7 +83,7 @@ plt.show()
 
 Scatter plots were used to visualize the relationship between wine quality and each chemical property.
 
-python
+python```
 import seaborn as sns
 
 features = ['fixed acidity', 'volatile acidity', 'citric acid', 'residual sugar', 'chlorides', 'free sulfur dioxide', 'total sulfur dioxide', 'density', 'pH', 'sulphates', 'alcohol']
