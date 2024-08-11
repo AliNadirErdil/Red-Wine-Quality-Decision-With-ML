@@ -15,7 +15,6 @@ This project utilizes machine learning techniques to predict the quality of red 
 - [Results](#results)
 - [Usage](#usage)
 - [Contributing](#contributing)
-- [License](#license)
 
 ## Introduction
 
