@@ -52,7 +52,7 @@ df.info()
 I checked for missing values to ensure the data's integrity.
 
 ```python
-print(df.isnull().sum())
+df.isnull().sum()
 ```
 ![image](https://github.com/user-attachments/assets/c65fc4b4-d533-4e82-b350-b0333f6ff658)
 
@@ -205,7 +205,7 @@ To use this project, follow these steps:
 ```bash
 git clone https://github.com/AliNadirErdil/Red-Wine-Quality-Decision-With-ML.git
 ```
-2. **Navigate to the Project Directory
+2. **Navigate to the Project Directory**
 **
 ```bash
 cd Red-Wine-Quality-Decision-With-ML
@@ -214,7 +214,7 @@ cd Red-Wine-Quality-Decision-With-ML
 ```bash
 pip install -r requirements.txt
 ```
-3. **Open the Jupyter Notebook
+3. **Open the Jupyter Notebook**
 **
 ```bash
 jupyter notebook
