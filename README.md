@@ -206,7 +206,6 @@ To use this project, follow these steps:
 git clone https://github.com/AliNadirErdil/Red-Wine-Quality-Decision-With-ML.git
 ```
 2. **Navigate to the Project Directory**
-**
 ```bash
 cd Red-Wine-Quality-Decision-With-ML
 ```
@@ -215,7 +214,6 @@ cd Red-Wine-Quality-Decision-With-ML
 pip install -r requirements.txt
 ```
 3. **Open the Jupyter Notebook**
-**
 ```bash
 jupyter notebook
 ```
