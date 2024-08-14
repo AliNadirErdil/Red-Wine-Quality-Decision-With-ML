@@ -209,11 +209,11 @@ git clone https://github.com/AliNadirErdil/Red-Wine-Quality-Decision-With-ML.git
 ```bash
 cd Red-Wine-Quality-Decision-With-ML
 ```
-2. **Install the required dependencies:**
+3. **Install the required dependencies:**
 ```bash
 pip install -r requirements.txt
 ```
-3. **Open the Jupyter Notebook**
+4. **Open the Jupyter Notebook**
 ```bash
 jupyter notebook
 ```
