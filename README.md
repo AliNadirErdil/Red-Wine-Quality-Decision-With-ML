@@ -87,7 +87,7 @@ plt.show()
 
 In wine, the `total sulfur dioxide (SO2)` level typically ranges between 10 and 200 mg/L, indicating the amount of sulfur dioxide used in the wine. However, in certain cases, such as with sweet wines that have high sugar content or wines that need to be stored for extended periods, this value can rise up to `300` mg/L. Therefore, instead of focusing on individual values, I prefer to maintain a consistent level in the wine.
 
-On the other hand, in cases where outliers exist, such as abnormally high levels of `total sulfur dioxide`, `citric acid`, or `volatile acidity`, it is crucial to evaluate whether these values are a result of measurement errors or rare but plausible instances. Instead of removing all outliers, I carefully assess their potential significance, ensuring that the model remains robust while preserving important variations that could represent unique characteristics of certain wines. Additionally, I use a Random Forest Classifier for this project, which is a robust ensemble learning method. It constructs multiple decision trees and aggregates their results, making it less sensitive to outliers and noisy data. This allows the model to capture complex patterns in the wine dataset while maintaining overall stability and performance.
+On the other hand, in cases where outliers exist, such as abnormally high levels of `total sulfur dioxide`, `citric acid`, or `volatile acidity`, it is crucial to evaluate whether these values are a result of measurement errors or rare but plausible instances. Instead of removing all outliers, I carefully assess their potential significance, ensuring that the model remains robust while preserving important variations that could represent unique characteristics of certain wines. Additionally, I use a `Random Forest Classifier` for this project, which is a robust ensemble learning method. It constructs multiple decision trees and aggregates their results, making it less sensitive to outliers and noisy data. This allows the model to capture complex patterns in the wine dataset while maintaining overall stability and performance.
 
 ### 5. Scatter Plots
 
@@ -157,7 +157,7 @@ X_train, X_test, y_train, y_test = train_test_split(X_scaled, y, test_size=0.3, 
 
 To handle class imbalances, I applied SMOTE (Synthetic Minority Over-sampling Technique).
 
-Initially, the model was trained without SMOTE to assess its performance under the original class distribution. Subsequently, SMOTE was used to create synthetic samples and balance the dataset. The differences in model performance between these approaches are detailed in the [Results](#results) section.
+Initially, the model was trained without `SMOTE` to assess its performance under the original class distribution. Subsequently, SMOTE was used to create synthetic samples and balance the dataset. The differences in model performance between these approaches are detailed in the [Results](#results) section.
 
    ```python
 from imblearn.over_sampling import SMOTE
@@ -189,13 +189,13 @@ The RandomForestClassifier demonstrated strong performance in predicting wine qu
 
 **Using SMOTE**
 
-When SMOTE was applied, the model's performance improved by addressing class imbalance. The generated synthetic samples helped the model to better learn from minority classes, resulting in a more balanced and accurate prediction.
+When `SMOTE` was applied, the model's performance improved by addressing class imbalance. The generated synthetic samples helped the model to better learn from minority classes, resulting in a more balanced and accurate prediction.
 
 ![image](https://github.com/user-attachments/assets/20424ad1-7749-4c5f-ba6f-bbea3c7ba567)
 
 **Not using SMOTE**
 
-Without using SMOTE, the model's performance reflected the inherent class imbalance in the dataset. The predictions were more skewed towards the majority class, which can lead to less reliable results for the minority class.
+Without using `SMOTE`, the model's performance reflected the inherent class imbalance in the dataset. The predictions were more skewed towards the majority class, which can lead to less reliable results for the minority class.
 
 ![image](https://github.com/user-attachments/assets/55510f88-9dbf-47fd-bbf1-889d4c33c668)
 
