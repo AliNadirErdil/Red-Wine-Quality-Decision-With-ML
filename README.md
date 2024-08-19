@@ -87,6 +87,8 @@ plt.show()
 
 In wine, the total sulfur dioxide (SO2) level typically ranges between 10 and 200 mg/L, indicating the amount of sulfur dioxide used in the wine. However, in certain cases, such as with sweet wines that have high sugar content or wines that need to be stored for extended periods, this value can rise up to 300 mg/L. Therefore, instead of focusing on individual values, I prefer to maintain a consistent level in the wine.
 
+On the other hand, in cases where outliers exist, such as abnormally high levels of total sulfur dioxide, citric acid, or volatile acidity, it is crucial to evaluate whether these values are a result of measurement errors or rare but plausible instances. Instead of removing all outliers, I carefully assess their potential significance, ensuring that the model remains robust while preserving important variations that could represent unique characteristics of certain wines. Additionally, I use a Random Forest Classifier for this project, which is a robust ensemble learning method. It constructs multiple decision trees and aggregates their results, making it less sensitive to outliers and noisy data. This allows the model to capture complex patterns in the wine dataset while maintaining overall stability and performance.
+
 ### 5. Scatter Plots
 
 Scatter plots were used to visualize the relationship between wine quality and each chemical property.
